@@ -1,0 +1,144 @@
+/* body { */
+/* background-image: url(gif.jpg);
+  background-size: cover;
+  background-attachment: fixed; */
+/* } */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+.anime {
+  /* position: relative; */
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.anime.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.jajal {
+  animation: bum 5s ease-in-out;
+}
+
+.atas {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 7%;
+  background-color: rgba(247, 216, 221, 0.5);
+  position: fixed;
+  top: 800px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.atas .atas-1 {
+  color: rgb(255, 254, 254);
+  font-size: 3rem;
+  font-family: "Inconsolata", monospace;
+  font-weight: 500;
+  margin: 1rem;
+}
+
+.potoo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+
+.poto {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  flex-wrap: wrap;
+  background-color: rgba(240, 248, 255, 0.6);
+  animation: warna 4s ease-in-out infinite;
+}
+
+.poto-1 {
+  height: 30%;
+  width: 30%;
+  padding: 1rem;
+}
+
+@keyframes pff {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes warna {
+  0% {
+    box-shadow: 0 0 2px rgb(255, 161, 249), 0 0 2px rgb(255, 161, 249),
+      0 0 20px rgb(255, 161, 249);
+  }
+}
+
+.audio-icon {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  animation: muter 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+@keyframes muter {
+  form {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* media squari */
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+  .poto-1 {
+    height: 80%;
+    width: 80%;
+    padding: 1rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 35%;
+  }
+}
